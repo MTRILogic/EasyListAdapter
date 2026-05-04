@@ -1,4 +1,5 @@
 # EasyListAdapter
+[![](https://jitpack.io/v/MTRILogic/EasyListAdapter.svg)](https://jitpack.io/#MTRILogic/EasyListAdapter)
 
 Una librería Java para Swing que implementa el patrón **RecyclerView** de Android en componentes `JList`. Permite crear listas eficientes con múltiples tipos de items, reutilización de componentes y tracking por ID único.
 
