@@ -1,6 +1,7 @@
 package com.mtrilogic.desktop.demos.easylistadapter;
 
 import com.mtrilogic.desktop.easylistadapter.Item;
+import com.mtrilogic.desktop.easylistadapter.Model;
 
 import javax.swing.*;
 import java.awt.*;
@@ -18,7 +19,7 @@ public class LocalItem extends Item<LocalModel> {
     }
 
     @Override
-    protected void onBindModel() {
+    protected void onBindModel(JList<? extends Model> list) {
         lblText.setBackground(selected ? Color.BLUE : Color.CYAN);
         lblText.setForeground(selected ? Color.WHITE : Color.BLACK);
         lblText.setText(model.getText());

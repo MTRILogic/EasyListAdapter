@@ -13,7 +13,7 @@ import java.util.Map;
  * según su tipo, evitando la creación excesiva de objetos y mejorando el rendimiento.
  * <p>
  * El mecanismo de reutilización funciona manteniendo una instancia de cada tipo
- * de item ({@code itemType}) y actualizando sus datos mediante {@link Item#bindModel(Model, int, boolean, boolean)}.
+ * de item ({@code itemType}) y actualizando sus datos mediante {@link Item#bindModel(JList, Model, int, boolean, boolean)}.
  * Esto es similar al patrón ViewHolder de Android.
  *
  * @see ListCellRenderer
@@ -72,7 +72,7 @@ public class ListAdapter implements ListCellRenderer<Model> {
             item = listener.getItem(itemType);
             itemMap.put(itemType, item);
         }
-        item.bindModel(model, position, isSelected, cellHasFocus);
+        item.bindModel(list, model, position, isSelected, cellHasFocus);
         return item;
     }
 

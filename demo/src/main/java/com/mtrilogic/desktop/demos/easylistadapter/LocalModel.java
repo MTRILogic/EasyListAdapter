@@ -5,7 +5,7 @@ import com.mtrilogic.desktop.easylistadapter.Model;
 /**
  * Modelo de ejemplo que usa ID automático (tipo 0).
  * <p>
- * El ID se genera automáticamente de forma ascendente al llamar a super(0).
+ * El ID se genera automáticamente de forma ascendente al llamar a <super(0)>.
  */
 public class LocalModel extends Model {
     private String text;

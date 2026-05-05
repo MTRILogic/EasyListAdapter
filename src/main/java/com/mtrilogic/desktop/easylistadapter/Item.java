@@ -2,6 +2,7 @@ package com.mtrilogic.desktop.easylistadapter;
 
 import com.mtrilogic.desktop.abstracts.SpringPanel;
 
+import javax.swing.*;
 import java.awt.*;
 
 /**
@@ -11,7 +12,7 @@ import java.awt.*;
  * para crear items visuales que se muestran en un {@link EasyList}. Maneja automáticamente
  * el enlace con el modelo de datos y el estado visual (selección y foco).
  * <p>
- * Las subclases deben implementar {@link #onBindModel()} para definir cómo se actualizan
+ * Las subclases deben implementar {@link #onBindModel(JList)} para definir cómo se actualizan
  * los componentes visuales cuando el modelo cambia.
  * <p>
  * Ejemplo de implementación:
@@ -66,7 +67,7 @@ public abstract class Item<M extends Model> extends SpringPanel {
      * componentes visuales según los datos del {@link #model}, {@link #selected}
      * y {@link #focused}.
      */
-    protected abstract void onBindModel();
+    protected abstract void onBindModel(JList<? extends Model> list);
 
     /**
      * Crea un nuevo Item con el tipo de modelo especificado.
@@ -82,19 +83,19 @@ public abstract class Item<M extends Model> extends SpringPanel {
      * <p>
      * Este método es invocado por {@link ListAdapter} cuando el item
      * debe mostrar nuevos datos. Realiza el casting seguro del modelo
-     * y actualiza las variables de estado antes de invocar {@link #onBindModel()}.
+     * y actualiza las variables de estado antes de invocar {@link #onBindModel(JList)}.
      *
      * @param m Modelo a enlazar, debe ser compatible con el tipo M
      * @param position Posición del item dentro de la lista
      * @param selected {@code true} si el item está seleccionado
      * @param focused {@code true} si el item tiene el foco
      */
-    public void bindModel(Model m, int position, boolean selected, boolean focused) {
+    public void bindModel(JList<? extends Model> list, Model m, int position, boolean selected, boolean focused) {
         model = clazz.cast(m);
         this.position = position;
         this.selected = selected;
         this.focused = focused;
-        onBindModel();
+        onBindModel(list);
     }
 
     /**
