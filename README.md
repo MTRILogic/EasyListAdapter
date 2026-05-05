@@ -29,9 +29,10 @@ Agrega la dependencia:
 
 ```kotlin
 dependencies {
-    implementation("com.github.MTRILogic:EasyListAdapter:1.0.0")
+    implementation("com.github.MTRILogic:EasyListAdapter:LastTag")
 }
 ```
+Nota: Ver el último tag en la sección de Releases
 
 ## Uso rápido
 
