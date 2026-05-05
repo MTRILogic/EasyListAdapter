@@ -26,7 +26,7 @@ import java.awt.*;
  *     }
  *
  *     {@literal @Override}
- *     protected void onBindModel() {
+ *     protected void onBindModel(JList<? extends Model> list) {
  *         label.setText(model.getName());
  *         label.setBackground(selected ? BLUE : WHITE);
  *     }
@@ -66,6 +66,8 @@ public abstract class Item<M extends Model> extends SpringPanel {
      * Las subclases deben implementar este método para actualizar sus
      * componentes visuales según los datos del {@link #model}, {@link #selected}
      * y {@link #focused}.
+     *
+     * @param list La lista a la que pertenece este item
      */
     protected abstract void onBindModel(JList<? extends Model> list);
 
@@ -85,6 +87,7 @@ public abstract class Item<M extends Model> extends SpringPanel {
      * debe mostrar nuevos datos. Realiza el casting seguro del modelo
      * y actualiza las variables de estado antes de invocar {@link #onBindModel(JList)}.
      *
+     * @param list La lista a la que pertenece este item
      * @param m Modelo a enlazar, debe ser compatible con el tipo M
      * @param position Posición del item dentro de la lista
      * @param selected {@code true} si el item está seleccionado

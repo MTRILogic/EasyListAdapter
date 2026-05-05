@@ -63,7 +63,7 @@ public class MyItem extends Item<MyModel> {
     }
 
     @Override
-    protected void onBindModel() {
+    protected void onBindModel(JList<? extends Model> list) {
         label.setText(model.getText());
         label.setBackground(selected ? Color.BLUE : Color.WHITE);
     }
@@ -150,7 +150,7 @@ Utilidades:
 ### Item<M extends Model>
 
 Métodos para sobrescribir:
-- `onBindModel()` - Actualizar UI cuando cambian los datos
+- `onBindModel(JList<? extends Model> list)` - Actualizar UI cuando cambian los datos
 - `onNewHeight(int)` - Definir altura personalizada
 
 Campos accesibles:

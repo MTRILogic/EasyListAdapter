@@ -94,7 +94,7 @@ public class ListAdapter implements ListCellRenderer<Model> {
          * <p>
          * Este método es invocado cuando {@link ListAdapter} encuentra un tipo
          * de item que aún no existe en su caché. Las instancias se reutilizan
-         * posteriormente mediante {@link Item#bindModel}.
+         * posteriormente mediante {@link Item#bindModel(JList, Model, int, boolean, boolean)}.
          *
          * @param itemType Tipo de item (ej.: 0 para encabezados, 1 para contenido)
          * @return Nueva instancia de {@link Item} para el tipo especificado
