@@ -15,7 +15,7 @@ public class LocalItem extends Item<LocalModel> {
         lblText.setHorizontalAlignment(SwingConstants.RIGHT);
         lblText.setBackground(Color.CYAN);
         lblText.setOpaque(true);
-        with(lblText).north(0).west(50).east(5).south(1);
+        with(lblText).top(0).left(50).right(5).bottom(1);
     }
 
     @Override

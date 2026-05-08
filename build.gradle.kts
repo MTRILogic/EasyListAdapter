@@ -16,7 +16,7 @@ repositories {
 }
 
 dependencies {
-    api("com.github.MTRILogic:SpringPanel2:1.0.0")
+    api("com.github.MTRILogic:SpringPanel2:1.1.0")
 
     testImplementation(platform("org.junit:junit-bom:6.0.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")

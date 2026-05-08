@@ -58,7 +58,7 @@ public class MainFrame extends JFrame {
             
             // EasyList provee createScrollPane()
             JScrollPane scrollPane = easyList.createScrollPane();
-            with(scrollPane).north(0).west(0).east(0).south(0);
+            with(scrollPane).top(0).left(0).right(0).bottom(0);
         }
 
         @Override

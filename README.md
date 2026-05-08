@@ -29,7 +29,7 @@ Agrega la dependencia:
 
 ```kotlin
 dependencies {
-    implementation("com.github.MTRILogic:EasyListAdapter:LastTag")
+    implementation("com.github.MTRILogic:EasyListAdapter:Tag")
 }
 ```
 Nota: Ver el último tag en la sección de Releases
@@ -60,7 +60,7 @@ public class MyItem extends Item<MyModel> {
     public MyItem() {
         super(MyModel.class);
         setBackground(Color.WHITE);
-        with(label).north(5).west(5).east(5).south(5);
+        with(label).top(5).left(5).right(5).bottom(5);
     }
 
     @Override
@@ -170,7 +170,7 @@ Ver el módulo `/demo` para una implementación funcional con:
 ## Requisitos
 
 - Java 8 o superior
-- SpringPanel 1.0.0 (incluido automáticamente vía JitPack)
+- SpringPanel2 1.1.0 (incluido automáticamente vía JitPack)
 
 ## Licencia
 
